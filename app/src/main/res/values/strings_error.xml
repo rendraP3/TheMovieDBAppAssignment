@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fetching_movie_detail">Error fetching movie details</string>
+    <string name="fetching_movie_credit">Error fetching movie credits</string>
+    <string name="fetching_movie_videos">Error fetching movie videos</string>
+    <string name="fetching_movie_recommendations">Error fetching movie recommendations</string>
+</resources>
