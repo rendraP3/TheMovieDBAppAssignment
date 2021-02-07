@@ -11,14 +11,13 @@ android {
 
     defaultConfig {
         applicationId "com.dotdevs.assignmenthappy5"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "API_URL", '"https://api.themoviedb.org/3/"'
         buildConfigField "String", "API_KEY", '"eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3YmVmODY5MDZlZGUyYWI0MGI0MDhjYzFjZWNkNGZlNyIsInN1YiI6IjVlMDhjYzYzZDIzNmU2MDAxMGEyZTU3NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7OKPukz8QiwArlDVeWweyKNnjSZUtwssTbePsVDLj5I"'
     }
 
@@ -48,6 +47,8 @@ dependencies {
     implementation "androidx.core:core-ktx:$ktx_version"
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "org.jetbrains.kotlin:kotlin-reflect:$reflect_version"
+    implementation "androidx.activity:activity-ktx:$activity_version"
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
 
     // Layout
     implementation "com.google.android.material:material:$material_version"
@@ -57,6 +58,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
 
     // Paging
     implementation "androidx.paging:paging-runtime-ktx:$paging_version"
@@ -64,7 +66,12 @@ dependencies {
     // Room
     implementation "androidx.room:room-runtime:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt "androidx.room:room-compiler:$room_version"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
     // Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
@@ -78,9 +85,12 @@ dependencies {
     // Hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_jetpack_version"
+    kapt "androidx.hilt:hilt-compiler:$hilt_jetpack_version"
 
     // Glide
     implementation "com.github.bumptech.glide:glide:$glide_version"
+    implementation  "com.github.bumptech.glide:okhttp3-integration:$glide_version"
     kapt "com.github.bumptech.glide:compiler:$glide_version"
 
     // Lottie
@@ -94,6 +104,9 @@ dependencies {
 
     // Debug
     debugImplementation "com.github.haroldadmin:WhatTheStack:$wts_version"
+
+    // UI
+    implementation "com.ismaeldivita.chipnavigation:chip-navigation-bar:$chip_nav_bar_version"
 
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$androidx_junit_version"

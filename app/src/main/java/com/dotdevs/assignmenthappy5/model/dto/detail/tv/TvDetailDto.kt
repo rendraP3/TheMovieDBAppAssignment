@@ -47,8 +47,8 @@ open class TvDetailDto(
     @field:Json(name = "next_episode_to_air")
     val nextEpisodeToAir: Any? = null,
 
-//    @field:Json(name = "networks")
-//    val networks: List<NetworkItemDto>? = null,
+    @field:Json(name = "networks")
+    val networks: List<NetworkItemDto>? = null,
 
     @field:Json(name = "number_of_episodes")
     val numberOfEpisodes: Int? = null,
@@ -80,8 +80,8 @@ open class TvDetailDto(
     @field:Json(name = "production_countries")
     val productionCountries: List<ProductionCountryItemDto>? = null,
 
-//    @field:Json(name = "seasons")
-//    val seasons: List<SeasonItemDto>? = null,
+    @field:Json(name = "seasons")
+    val seasons: List<SeasonItemDto>? = null,
 
     @field:Json(name = "spoken_languages")
     val spokenLanguages: List<SpokenLanguagesItemDto>? = null,

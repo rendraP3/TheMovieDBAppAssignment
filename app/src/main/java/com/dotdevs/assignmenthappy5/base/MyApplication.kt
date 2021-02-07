@@ -1,4 +1,4 @@
-package com.dotdevs.assignmenthappy5
+package com.dotdevs.assignmenthappy5.base
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

@@ -2,7 +2,6 @@ package com.dotdevs.assignmenthappy5.model.dto.movie
 
 import androidx.annotation.Keep
 import com.squareup.moshi.Json
-import java.io.Serializable
 
 @Keep
 data class MovieListDto (
@@ -11,7 +10,7 @@ data class MovieListDto (
     val page : Int? = null,
 
     @field:Json(name = "results")
-    val results: List<MovieListItemDto>? = null,
+    val results: List<MovieDto>? = null,
 
     @field:Json(name = "total_pages")
     val totalPages : Int? = null,
